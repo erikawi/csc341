@@ -47,9 +47,10 @@ int main(void)
 	printf("expected = %d, old value which was returned is %d \n",expected,valueReturned);
 
 	int varA = 5, varB = 9;
-
+	int *p1 = &valueReturned, *p2 = &varA, *p3 = &varB;
 	printf("varA is: %d\nvarB is: %d", varA, varB);
-	swap(&valueReturned, &expected, &varA, &varB);
+	//swap(&valueReturned, &expected, &varA, &varB);
+	swap(p1, pointa, p2, p3);
 
 	printf("\nAfter swap\nvalueReturned is: %d\nexpected is: %d\nvarA is: %d\nvarB is: %d\n", valueReturned, expected, varA, varB);
 
